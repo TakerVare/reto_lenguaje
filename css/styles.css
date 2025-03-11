@@ -1,15 +1,17 @@
 /* FONDO DEL BODY */
 /* OPCIÓN 1*/
-/*.container {
+/*
+.container {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle, orange, transparent 20%, orangered);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: orange;
-}*/
-
+}
+*/
 /*OPCIÓN 2*/
+
 .container {
   width: 100%;
   height: 100%;
@@ -25,6 +27,38 @@
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
 }
 
+@font-face {
+  font-family: 'Pokemon Solid';
+  src: url('pokemonsolid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cabecera{
+  width: 99%;
+  height: 500px;
+  background-image: url(Banner-cabecera.png); 
+  background-size:cover;
+  font-family: 'Pokemon Solid', sans-serif;
+  color: red;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.titulo-banner{
+  width: 99%;
+  height: 30%;
+  align-items: center;
+  justify-content: center;
+  display:flex
+}
+
+.coleccion-tarjetas{
+  display: flex;
+  gap: 20px;
+}
 
 
 /* From Uiverse.io by ElSombrero2 */ 
@@ -107,17 +141,23 @@
   }
   .margen-superior-contenedor-portada{
     width: 99%;
-    height: 40%;
+    height: 30%;
   }
   .imagen-portada{
     width: 95%;
     height: 40%;
     text-align: center;
+    display: block; /* evita espacios extra en inline-block */    
+  }
+
+  .imagen-portada img{
+    
+    max-height: 100%;
   }
 
   .contenedor-nombre{
 
-
+/*De momento no hay estilos que aplicar*/
   }
   
   .card:hover .content {
@@ -237,3 +277,54 @@
       transform: translateY(0px);
     }
   }
+
+
+  /* From Uiverse.io by OnlyCodeChannel */ 
+.searchBox {
+  margin-top: 15px;
+  display: flex;
+  max-width: 430px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 50px;
+  position: relative;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  background-image: url(pokeball-lupa-mini.png);
+  background-size: cover;
+}
+/*hover effect*/
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+}
+
